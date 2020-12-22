@@ -15,7 +15,7 @@ const ElementContainer = styled.div`
 `;
 
 const SubjectElement = styled.span`
-  border: 1px solid white;
+  border: 1px solid ${props => props.theme.textcolor};
   border-radius: 20px;
   padding: 5px 10px;
   margin: 3px;
