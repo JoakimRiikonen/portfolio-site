@@ -21,9 +21,13 @@ const OuterContainer = styled.div`
 
 const Container = styled.div`
   padding: 20px 0;
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
   text-align: left;
+`
+const Navbar = styled.div`
+  display: flex;
+  justify-content: right;
 `
 
 const ProjectContainer = styled.div`
@@ -31,6 +35,7 @@ const ProjectContainer = styled.div`
 `
 
 const Title = styled.h2`
+  padding-top: 20px;
 `
 
 const Paragraph = styled.p``
@@ -57,14 +62,14 @@ const Page = () => {
         altcolor: "rgb(30, 38, 47);",
         textcolor: "rgb(242, 245, 247)",
         iconfill: "white",
-        oppositecolor: "rgb(255,255,255)"
+        oppositecolor: "rgb(235, 237, 240)"
       }
       setCurrentTheme("dark");
     }
     else if (currentTheme === "dark"){
       theme = {
         ...theme,
-        background: "rgb(239, 241, 245)",
+        background: "rgb(235, 237, 240)",
         altcolor: "rgb(250, 250, 250)",
         textcolor: "rgb(33, 35, 44)",
         iconfill: "black",
@@ -87,8 +92,10 @@ const Page = () => {
     <ThemeProvider theme={theme}>
       <OuterContainer>
         <Container>
-          <ThemeButton onClick={swapTheme}/>
-          <LanguageButton onClick={swapLanguage} currentLanguage={activeText.language}/>
+          <Navbar>
+            <ThemeButton onClick={swapTheme}/>
+            <LanguageButton onClick={swapLanguage} currentLanguage={activeText.language}/>
+          </Navbar>
           <PersonCard/>
           <Title>{activeText.titles.aboutme}</Title>
           <Paragraph>{activeText.aboutme}</Paragraph>
@@ -111,7 +118,6 @@ const Page = () => {
           </ProjectContainer>
           <Title>{activeText.titles.skills}</Title>
           <SkillsList text={activeText.skills}/>
-          <Title>{activeText.titles.certificates}</Title>
         </Container>
       </OuterContainer>
     </ThemeProvider>

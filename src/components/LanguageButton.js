@@ -2,18 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  margin: 15px;
-  padding: 20px;
+  display: block;
+  margin: 0;
+  padding: 0 20px;
   background: ${props => props.theme.background};
   color: ${props => props.theme.textcolor};
   font-size: 20px;
-  border-radius: 40px;
   border: 0px solid white;
   transition: padding 0.2s, margin 0.2s, background ${props => props.theme.transitiontime};
 
   :hover {
-    padding: 25px;
-    margin: 10px;
     cursor: pointer;
   }
 `;

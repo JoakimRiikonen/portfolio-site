@@ -18,13 +18,29 @@ const FaceImage = styled.img`
 `
 
 const Name = styled.h2`
-  font-size: 40px;
+  font-size: 50px;
   padding: 0px 45px;
+  margin: 30px 0;
 `
 
-const Role = styled.h3`
-  font-size: 30px;
+const Resume = styled.a`
+  background: ${props => props.theme.altcolor};
+  color: ${props => props.theme.textcolor};
+  margin: 45px;
+  padding: 10px 35px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: background 0.2s;
+
+  :hover {
+    background: orange;
+    cursor: pointer;
+  }
 `
+
 
 const PersonCard = () => {
   return (
@@ -32,7 +48,7 @@ const PersonCard = () => {
       <FaceImage src={tempface} alt="my face"/>
       <TextContainer>
         <Name>Joakim Riikonen</Name>
-        <Role>Junior Full-stack developer</Role>
+        <Resume href="#">CV</Resume>
       </TextContainer>
     </Container>
   );

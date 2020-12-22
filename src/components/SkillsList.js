@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  padding-bottom: 70px;
 `
 
 const SubjectContainer = styled.div`

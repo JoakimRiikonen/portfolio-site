@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: ${props => props.theme.altcolor};
-  width: 450px;
+  width: 550px;
   margin: 10px 20px;
   border-radius: 10px;
   transition: background-color ${props => props.theme.transitiontime}
 `
 
 const Image = styled.img`
-  width: 450px;
-  height: 200px;
+  width: 550px;
+  height: 250px;
   border-radius: 10px 10px 0 0;
 `
 const Title = styled.h3`
