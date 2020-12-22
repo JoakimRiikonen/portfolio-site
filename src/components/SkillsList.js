@@ -21,49 +21,20 @@ const SubjectElement = styled.span`
   margin: 3px;
 `;
 
-const SkillsList = () => {
+const SkillsList = (props) => {
+
   return (
     <Container>
-      <SubjectContainer>
-        <SubjectTitle>Programming Languages</SubjectTitle>
-        <ElementContainer>
-          <SubjectElement>JavaScript</SubjectElement>
-          <SubjectElement>Python</SubjectElement>
-          <SubjectElement>Java</SubjectElement>
-        </ElementContainer>
-      </SubjectContainer>
-
-      <SubjectContainer>
-        <SubjectTitle>Web development</SubjectTitle>
-        <ElementContainer>
-          <SubjectElement>React</SubjectElement>
-          <SubjectElement>Django</SubjectElement>
-          <SubjectElement>Express</SubjectElement>
-          <SubjectElement>Node.js</SubjectElement>
-          <SubjectElement>HTML</SubjectElement>
-          <SubjectElement>CSS</SubjectElement>
-        </ElementContainer>
-      </SubjectContainer>
-
-      <SubjectContainer>
-        <SubjectTitle>Databases</SubjectTitle>
-        <ElementContainer>
-          <SubjectElement>MySQL</SubjectElement>
-          <SubjectElement>PostgreSQL</SubjectElement>
-          <SubjectElement>MongoDB</SubjectElement>
-        </ElementContainer>
-      </SubjectContainer>
-
-      <SubjectContainer>
-        <SubjectTitle>Data Science and AI</SubjectTitle>
-        <ElementContainer>
-          <SubjectElement>Tensorflow</SubjectElement>
-          <SubjectElement>Keras</SubjectElement>
-          <SubjectElement>NumPy</SubjectElement>
-          <SubjectElement>Pandas</SubjectElement>
-          <SubjectElement>Matplotlib</SubjectElement>
-        </ElementContainer>
-      </SubjectContainer>
+      {props.text.map((skill) => (
+        <SubjectContainer>
+          <SubjectTitle>{skill.title}</SubjectTitle>
+          <ElementContainer>
+            {skill.elements.map((element) => (
+              <SubjectElement>{element}</SubjectElement>
+            ))}
+          </ElementContainer>
+        </SubjectContainer>
+      ))}
     </Container>
   );
 }

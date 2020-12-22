@@ -5,6 +5,10 @@ import PersonCard from './PersonCard';
 import ProjectCard from './ProjectCard';
 import SkillsList from './SkillsList';
 import ThemeButton from './ThemeButton';
+import LanguageButton from './LanguageButton';
+
+import text_en from "../text/text_en.json";
+import text_fi from "../text/text_fi.json";
 
 import projectimage from '../images/projectimage.PNG'
 
@@ -43,6 +47,7 @@ var theme = {
 const Page = () => {
 
   const [currentTheme, setCurrentTheme] = useState("dark");
+  const [activeText, setActiveText] = useState(text_en);
 
   const swapTheme = () => {
     if (currentTheme === "light") {
@@ -69,22 +74,44 @@ const Page = () => {
     }
   }
 
+  const swapLanguage = () => {
+    if (activeText.language === "en"){
+      setActiveText(text_fi);
+    }
+    else if (activeText.language === "fi"){
+      setActiveText(text_en);
+    }
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <OuterContainer>
         <Container>
-          <ThemeButton onClick = {swapTheme}/>
+          <ThemeButton onClick={swapTheme}/>
+          <LanguageButton onClick={swapLanguage} currentLanguage={activeText.language}/>
           <PersonCard/>
-          <Title>About me</Title>
-          <Paragraph>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Paragraph>
-          <Title>Projects</Title>
+          <Title>{activeText.titles.aboutme}</Title>
+          <Paragraph>{activeText.aboutme}</Paragraph>
+          <Title>{activeText.titles.projects}</Title>
           <ProjectContainer>
-            <ProjectCard image={projectimage} theme={currentTheme}/>
-            <ProjectCard image={projectimage} theme={currentTheme}/>
+            <ProjectCard
+              image={projectimage}
+              text={activeText.projects[0]}
+              githubLink="aaaa"
+              liveappLink="alive"
+              theme={currentTheme}
+            />
+            <ProjectCard
+              image={projectimage}
+              text={activeText.projects[1]}
+              githubLink="bbbb"
+              liveappLink="blive"
+              theme={currentTheme}
+            />
           </ProjectContainer>
-          <Title>Skills</Title>
-          <SkillsList/>
-          <Title>Certificates</Title>
+          <Title>{activeText.titles.skills}</Title>
+          <SkillsList text={activeText.skills}/>
+          <Title>{activeText.titles.certificates}</Title>
         </Container>
       </OuterContainer>
     </ThemeProvider>

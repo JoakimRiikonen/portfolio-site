@@ -1,0 +1,40 @@
+{
+  "language": "fi",
+  "titles": {
+    "aboutme": "Minusta",
+    "projects": "Projekteja",
+    "skills": "Taidot",
+    "certificates": "Kurssit"
+  },
+  "aboutme": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "projects": [
+    {
+      "title": "Recipe roller",
+      "description": "description",
+      "tags": ["tag1", "tag2"]
+    },
+    {
+      "title": "Fölitracker",
+      "description": "description2",
+      "tags": ["tag3", "tag4"]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "elements": ["JavaScript", "Python", "Java"]
+    },
+    {
+      "title": "Web development",
+      "elements": ["React", "Django", "Express", "Node.js", "HTML", "CSS"]
+    },
+    {
+      "title": "Databases",
+      "elements": ["MySQL", "PostgreSQL", "MongoDB"]
+    },
+    {
+      "title": "Data science and AI",
+      "elements": ["Tensorflow", "Keras", "NumPy", "Pandas", "Matplotlib"]
+    }
+  ]
+}
