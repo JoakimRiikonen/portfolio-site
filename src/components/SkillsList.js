@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  padding: 5px;
   padding-bottom: 70px;
 `
 
@@ -9,10 +10,13 @@ const SubjectContainer = styled.div`
 `;
 
 const SubjectTitle = styled.h3`
+  margin: 10px;
 `;
 
 const ElementContainer = styled.div`
   padding-left: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
 `;
 
 const SubjectElement = styled.span`

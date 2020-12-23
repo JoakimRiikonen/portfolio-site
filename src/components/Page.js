@@ -24,6 +24,10 @@ const Container = styled.div`
   width: 1200px;
   margin: 0 auto;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 const Navbar = styled.div`
   display: flex;
@@ -32,14 +36,20 @@ const Navbar = styled.div`
 
 const ProjectContainer = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+  }
 `
 
 const Title = styled.h2`
-  padding-top: 20px;
+  padding: 20px 10px 10px 10px;
 `
 
 const Paragraph = styled.p`
   font-size: 20px;
+  padding: 0 10px;
 `
 
 var theme = {

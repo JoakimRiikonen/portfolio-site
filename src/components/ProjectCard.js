@@ -6,13 +6,21 @@ const Container = styled.div`
   width: 550px;
   margin: 10px 20px;
   border-radius: 10px;
-  transition: background-color ${props => props.theme.transitiontime}
+  transition: background-color ${props => props.theme.transitiontime};
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `
 
 const Image = styled.img`
   width: 550px;
   height: 250px;
   border-radius: 10px 10px 0 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 const Title = styled.h3`
   margin: 5px 10px;

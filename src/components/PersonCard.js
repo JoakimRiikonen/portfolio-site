@@ -9,15 +9,29 @@ const Container = styled.div`
   display: flex;
   margin: 0 auto;
   width: 60%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: block;
+  }
 `
 
 const TextContainer = styled.div`
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
 
 const FaceImage = styled.img`
   width: 175px;
   height: 175px;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
 `
 
 const Name = styled.h2`
