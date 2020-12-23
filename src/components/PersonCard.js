@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import tempface from '../images/tempface.png';
 
+import cv_en from '../resumes/CV_en.pdf';
+import cv_fi from '../resumes/CV_fi.pdf';
+
 const Container = styled.div`
   display: flex;
   margin: 0 auto;
@@ -42,13 +45,13 @@ const Resume = styled.a`
 `
 
 
-const PersonCard = () => {
+const PersonCard = (props) => {
   return (
     <Container>
       <FaceImage src={tempface} alt="my face"/>
       <TextContainer>
         <Name>Joakim Riikonen</Name>
-        <Resume href="#" target="_blank">CV</Resume>
+        <Resume href={props.currentLanguage === "fi" ? cv_fi : cv_en} target="_blank">CV</Resume>
       </TextContainer>
     </Container>
   );
