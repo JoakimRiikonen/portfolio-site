@@ -3,37 +3,39 @@
   "titles": {
     "aboutme": "Minusta",
     "projects": "Projekteja",
-    "skills": "Taidot",
-    "certificates": "Kurssit"
+    "skills": "Taidot"
   },
-  "aboutme": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "aboutme": [
+    "Olen 22-vuotias tietotekniikan opiskelija Turun yliopistossa ja tällä hetkellä erikoistun web-kehitykseen. Valmistuin tietotekniikan kandidaatiksi viime kesänä ja sivuaineena suoritin valtakunnallisen liiketoimintaosaamisen verkko-opintokokonaisuuden. Aion jatkaa diplomi-insinöörin opintojani heti asepalvelukseni päätyttyä.",
+    "Koodaamisen ohella muihin harrastuksiini kuuluu tällä hetkellä mm. pelit, 3D-tulostus ja lukeminen."
+  ],
   "projects": [
     {
-      "title": "Recipe roller",
-      "description": "description",
-      "tags": ["tag1", "tag2"]
+      "title": "Recipe Roller",
+      "description": "CRUD-sovellus reseptien varastointiin.",
+      "tags": ["React", "Django"]
     },
     {
       "title": "Fölitracker",
-      "description": "description2",
-      "tags": ["tag3", "tag4"]
+      "description": "Sovellus, joka käyttää Fölin rajapintaa bussien seurantaan Turun alueella.",
+      "tags": ["React", "LeafletJs", "Node.js",  "Express"]
     }
   ],
   "skills": [
     {
-      "title": "Programming Languages",
+      "title": "Ohjelmointikielet",
       "elements": ["JavaScript", "Python", "Java"]
     },
     {
-      "title": "Web development",
+      "title": "Web-kehitys",
       "elements": ["React", "Django", "Express", "Node.js", "HTML", "CSS"]
     },
     {
-      "title": "Databases",
+      "title": "Tietokannat",
       "elements": ["MySQL", "PostgreSQL", "MongoDB"]
     },
     {
-      "title": "Data science and AI",
+      "title": "Datan käsittely ja AI",
       "elements": ["Tensorflow", "Keras", "NumPy", "Pandas", "Matplotlib"]
     }
   ]

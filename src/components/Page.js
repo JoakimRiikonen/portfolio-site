@@ -38,7 +38,9 @@ const Title = styled.h2`
   padding-top: 20px;
 `
 
-const Paragraph = styled.p``
+const Paragraph = styled.p`
+  font-size: 20px;
+`
 
 var theme = {
   background: "rgb(13,19,26)",
@@ -98,21 +100,23 @@ const Page = () => {
           </Navbar>
           <PersonCard/>
           <Title>{activeText.titles.aboutme}</Title>
-          <Paragraph>{activeText.aboutme}</Paragraph>
+          {activeText.aboutme.map((paragraph, i) => (
+            <Paragraph key={i}>{paragraph}</Paragraph>
+          ))}
           <Title>{activeText.titles.projects}</Title>
           <ProjectContainer>
             <ProjectCard
               image={projectimage}
               text={activeText.projects[0]}
-              githubLink="aaaa"
-              liveappLink="alive"
+              githubLink="https://github.com/JoakimRiikonen/RecipeRoller"
+              liveappLink="https://reciperoller.herokuapp.com/"
               theme={currentTheme}
             />
             <ProjectCard
               image={projectimage}
               text={activeText.projects[1]}
-              githubLink="bbbb"
-              liveappLink="blive"
+              githubLink="https://github.com/JoakimRiikonen/folitracker-demo"
+              liveappLink="https://folitracker.herokuapp.com/"
               theme={currentTheme}
             />
           </ProjectContainer>

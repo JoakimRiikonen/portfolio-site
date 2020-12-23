@@ -5,17 +5,20 @@
     "projects": "Projects",
     "skills": "Skills"
   },
-  "aboutme": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "aboutme": [
+    "I'm a 22-year-old software engineering student currently specializing in web development. I completed my Bachelor's degree in IT in the University of Turku last summer with a minor in economics, and will continue working towards my Master's degree after I have finished my military service.",
+    "Apart from software engineering, my other interests currently include video games, 3D printing, and reading."
+  ],
   "projects": [
     {
       "title": "Recipe Roller",
-      "description": "description",
-      "tags": ["tag1", "tag2"]
+      "description": "A CRUD-app for storing and viewing recipes.",
+      "tags": ["React", "Django"]
     },
     {
       "title": "Fölitracker",
-      "description": "description2",
-      "tags": ["tag3", "tag4"]
+      "description": "A demo app that uses the Föli open API to track buses in the Turku area.",
+      "tags": ["React", "LeafletJs", "Node.js",  "Express"]
     }
   ],
   "skills": [

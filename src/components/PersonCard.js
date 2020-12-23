@@ -48,7 +48,7 @@ const PersonCard = () => {
       <FaceImage src={tempface} alt="my face"/>
       <TextContainer>
         <Name>Joakim Riikonen</Name>
-        <Resume href="#">CV</Resume>
+        <Resume href="#" target="_blank">CV</Resume>
       </TextContainer>
     </Container>
   );

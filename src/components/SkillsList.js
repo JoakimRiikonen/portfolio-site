@@ -26,12 +26,12 @@ const SkillsList = (props) => {
 
   return (
     <Container>
-      {props.text.map((skill) => (
-        <SubjectContainer>
+      {props.text.map((skill, i) => (
+        <SubjectContainer key={i}>
           <SubjectTitle>{skill.title}</SubjectTitle>
           <ElementContainer>
-            {skill.elements.map((element) => (
-              <SubjectElement>{element}</SubjectElement>
+            {skill.elements.map((element, j) => (
+              <SubjectElement key={j}>{element}</SubjectElement>
             ))}
           </ElementContainer>
         </SubjectContainer>
