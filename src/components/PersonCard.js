@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import tempface from '../images/tempface.png';
+import face from '../images/face.png';
 
 import cv_en from '../resumes/CV_en.pdf';
 import cv_fi from '../resumes/CV_fi.pdf';
@@ -30,7 +30,7 @@ const FaceImage = styled.img`
   @media (max-width: 768px) {
     display: block;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 2q0px;
   }
 `
 
@@ -62,7 +62,7 @@ const Resume = styled.a`
 const PersonCard = (props) => {
   return (
     <Container>
-      <FaceImage src={tempface} alt="my face"/>
+      <FaceImage src={face} alt="my face" title="I need a better picture of myself"/>
       <TextContainer>
         <Name>Joakim Riikonen</Name>
         <Resume href={props.currentLanguage === "fi" ? cv_fi : cv_en} target="_blank">CV</Resume>

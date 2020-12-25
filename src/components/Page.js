@@ -10,7 +10,8 @@ import LanguageButton from './LanguageButton';
 import text_en from "../text/text_en.json";
 import text_fi from "../text/text_fi.json";
 
-import projectimage from '../images/projectimage.PNG'
+import reciperollerimage from '../images/reciperollerimage.PNG'
+import folitrackerimage from '../images/folitrackerimage.PNG'
 
 const OuterContainer = styled.div`
   text-align: center;
@@ -116,14 +117,14 @@ const Page = () => {
           <Title>{activeText.titles.projects}</Title>
           <ProjectContainer>
             <ProjectCard
-              image={projectimage}
+              image={reciperollerimage}
               text={activeText.projects[0]}
               githubLink="https://github.com/JoakimRiikonen/RecipeRoller"
               liveappLink="https://reciperoller.herokuapp.com/"
               theme={currentTheme}
             />
             <ProjectCard
-              image={projectimage}
+              image={folitrackerimage}
               text={activeText.projects[1]}
               githubLink="https://github.com/JoakimRiikonen/folitracker-demo"
               liveappLink="https://folitracker.herokuapp.com/"

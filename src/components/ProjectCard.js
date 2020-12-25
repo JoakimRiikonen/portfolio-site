@@ -17,6 +17,7 @@ const Image = styled.img`
   width: 550px;
   height: 250px;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
 
   @media (max-width: 768px) {
     width: 100%;
