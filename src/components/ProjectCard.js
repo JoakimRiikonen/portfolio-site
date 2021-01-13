@@ -8,7 +8,7 @@ const Container = styled.div`
   border-radius: 10px;
   transition: background-color ${props => props.theme.transitiontime};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     width: auto;
   }
 `
@@ -19,7 +19,7 @@ const Image = styled.img`
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 `

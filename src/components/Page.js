@@ -26,7 +26,7 @@ const Container = styled.div`
   margin: 0 auto;
   text-align: left;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 `
@@ -38,7 +38,7 @@ const Navbar = styled.div`
 const ProjectContainer = styled.div`
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: block;
     width: 100%;
   }

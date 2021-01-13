@@ -10,7 +10,7 @@ const Container = styled.div`
   margin: 0 auto;
   width: 60%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     width: 100%;
     display: block;
   }
@@ -25,7 +25,7 @@ const FaceImage = styled.img`
   height: 175px;
   border-radius: 50%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: block;
     margin: 0 auto;
     padding-top: 2q0px;
