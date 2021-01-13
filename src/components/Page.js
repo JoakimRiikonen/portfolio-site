@@ -109,7 +109,7 @@ const Page = () => {
             <ThemeButton onClick={swapTheme}/>
             <LanguageButton onClick={swapLanguage} currentLanguage={activeText.language}/>
           </Navbar>
-          <PersonCard currentLanguage={activeText.language}/>
+          <PersonCard currentLanguage={activeText.language} theme={currentTheme}/>
           <Title>{activeText.titles.aboutme}</Title>
           {activeText.aboutme.map((paragraph, i) => (
             <Paragraph key={i}>{paragraph}</Paragraph>
